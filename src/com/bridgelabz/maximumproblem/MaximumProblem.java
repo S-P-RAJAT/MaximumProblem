@@ -18,65 +18,21 @@ public class MaximumProblem {
 
 	}
 
-	public static int findMaximum(Integer Number1, Integer Number2, Integer Number3) {
-		if (Number1.compareTo(Number2) > 0) {
-			if (Number1.compareTo(Number3) > 0) {
-				return Number1;
+	public static <E extends Comparable<E>> E findMaximum(E firstInput, E secondInput, E thirdInput) {
+		if (firstInput.compareTo(secondInput) > 0) {
+			if (firstInput.compareTo(thirdInput) > 0) {
+				return firstInput;
 
 			} else {
-				return Number3;
+				return thirdInput;
 			}
 
 		} else {
-			if (Number2.compareTo(Number3) > 0) {
-				return Number2;
+			if (secondInput.compareTo(thirdInput) > 0) {
+				return secondInput;
 
 			} else {
-				return Number3;
-
-			}
-
-		}
-
-	}
-
-	public static float findMaximum(Float Number1, Float Number2, Float Number3) {
-		if (Number1.compareTo(Number2) > 0) {
-			if (Number1.compareTo(Number3) > 0) {
-				return Number1;
-
-			} else {
-				return Number3;
-			}
-
-		} else {
-			if (Number2.compareTo(Number3) > 0) {
-				return Number2;
-
-			} else {
-				return Number3;
-
-			}
-
-		}
-
-	}
-
-	public static String findMaximum(String String1, String String2, String String3) {
-		if (String1.compareTo(String2) > 0) {
-			if (String1.compareTo(String3) > 0) {
-				return String1;
-
-			} else {
-				return String3;
-			}
-
-		} else {
-			if (String2.compareTo(String3) > 0) {
-				return String2;
-
-			} else {
-				return String3;
+				return thirdInput;
 
 			}
 
